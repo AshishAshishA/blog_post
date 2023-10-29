@@ -9,3 +9,11 @@ class CommentForm(forms.Form):
         widget=forms.Textarea(attrs={"class":"form-control","placeholder":"Leave your comment!"})
     )
     
+class PostForm(forms.Form):
+    title=forms.CharField(
+        max_length=100,
+        widget=forms.TextInput(attrs={"class":"form-control1","placeholder":"Post Title"}),
+    )
+    body=forms.CharField(
+        widget=forms.Textarea(attrs={"class":"form-control1","placeholder":"Create Your Post"}),
+    )
